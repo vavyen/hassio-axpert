@@ -3,7 +3,7 @@ FROM $BUILD_FROM
 
 ENV LANG C.UTF-8
 
-RUN apk add --no-cache python3 && \
+RUN apk add --update --no-cache curl py-pip && \
     python3 -m ensurepip && \
     rm -r /usr/lib/python*/ensurepip && \
     pip install --upgrade pip setuptools crcmod paho-mqtt && \
