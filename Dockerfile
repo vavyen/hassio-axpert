@@ -1,5 +1,5 @@
 ARG BUILD_FROM
-FROM $BUILD_FROM
+FROM python:3.9-alpine
 
 ENV LANG C.UTF-8
 
