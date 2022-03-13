@@ -3,6 +3,8 @@ FROM $BUILD_FROM
 
 ENV LANG C.UTF-8
 
+echo "https://dl-cdn.alpinelinux.org/alpine/edge/community" >> /etc/apk/repositories
+
 RUN apk add --update --no-cache curl py-pip && \
     python3 -m ensurepip && \
     rm -r /usr/lib/python*/ensurepip && \
